@@ -1,0 +1,45 @@
+
+
+
+
+<!-- index.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Account</title>
+    <!-- Import your CSS file using the link tag -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    
+    <style>
+        /* Your inline CSS rules here */
+        body {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        
+        }
+        h1 {
+            color: rgb(14, 151, 55);
+        }
+        .container{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display:flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your EJS content goes here -->
+    <div class="conatiner">
+<h1 >Hi <%= name %></h1>
+<form   action="/logout?_method=DELETE" method="POST">
+  <button type="submit">Log Out</button>
+</form>
+</div>
+</body>
+</html>

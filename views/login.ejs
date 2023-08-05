@@ -1,0 +1,93 @@
+
+
+<!-- login.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <!-- Import your CSS file using the link tag -->
+    
+    <style>
+        /* Your inline CSS rules here */
+        body {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        
+    background: #1abc9c;
+        }
+        h1 {
+            line-height: 80px;
+    background:#16a085;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 30%;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+        }
+        .container{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display:flex;
+            flex-direction: column;
+        
+    
+        }
+        .container form{
+            padding: 30px 20px 25px 20px;
+            width: 19%;
+        }
+        .container form input{
+    height:45px;
+   
+    margin-bottom: 15px;
+    position: relative;
+}
+.container form  input{
+    height: 100%;
+    padding-left: 60px;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: 16px;
+}
+
+.container a{
+    color:#d9ede9;
+    text-decoration: none;
+    font-size: 17px;
+}
+    </style>
+
+</head>
+<body>
+    <!-- Your EJS content goes here -->
+    <div class="container">
+    <h1 >Login</h1>
+
+    <% if (messages.error) { %>
+    <%= messages.error %>
+        <%} %>
+    <form  action=" /login" method="POST">
+    
+    
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+    </form>
+    <a href="/register">Sign-Up</a>
+</div>
+</body>
+</html>
